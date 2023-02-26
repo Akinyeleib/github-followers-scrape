@@ -1,0 +1,19 @@
+[project]
+name = "github-scrape"
+version = "0.0.1"
+authors = [
+  { name="Akinyele Ibrahim", email="iakinyele3@gmail.com" },
+]
+description = "A program to scrape github followers"
+readme = "README.md"
+requires-python = ">=3.7"
+install_requires = ['requests', 'bs4']
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/akinyeleib/github-followers-scrape"
+"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
