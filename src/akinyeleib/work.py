@@ -1,10 +1,6 @@
 from bs4 import BeautifulSoup as bs
 import requests as rq
 
-username = input('Enter github Username: ').strip()
-
-res = rq.get(f'https://github.com/{username}')
-
 
 # Function to fetch users
 
@@ -46,15 +42,16 @@ def loader():
     followers_not_following_count = len(followers_not_following)
     print(f'{username} is not following {followers_not_following_count} user(s) back')
     
-    return 'success'
 
-    
-# Retriev status
-status = res.status_code
+def check():
+    global username
+    username = input('Enter github Username: ').strip()
+    res = rq.get(f'https://github.com/{username}')
 
-if status == 200:
-    
-    loader()
-    
-elif status == 404:
-    print(f'404 bad request\nPage not found!\nAccount not found for user: {username}')
+    # Retriev status
+    status = res.status_code
+    if status == 200:
+        loader()
+    elif status == 404:
+        print(f'404 bad request\nPage not found!\nAccount not found for user: {username}')
+
