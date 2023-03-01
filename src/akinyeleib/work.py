@@ -57,7 +57,9 @@ def loader():
     details['followers_not_following'] = followers_not_following
 
     followers_not_following_count = len(followers_not_following)
+    details['followers_not_following_count'] = followers_not_following_count
     print(f'{username} is not following {followers_not_following_count} user(s) back')
+    
     return details
     
 
