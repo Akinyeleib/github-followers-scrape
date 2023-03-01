@@ -29,7 +29,7 @@ def loader():
     print(f'Account found for user: {username}')
 
     
-    details['repos'] = followers
+    details['repos'] = repos
     print(f'{username} has {len(repos)} repositories')
     
     followers = github_follow("followers")
@@ -79,7 +79,7 @@ def check_repo():
     # <span title="24" data-view-component="true" class="Counter">24</span>
     link = f"https://github.com/{username}?tab=repositories"
     req = bs(rq.get(link).text, 'lxml')
-    items = bs.find_all('h3', class_="wb-break-all")
+    items = req.find_all('h3', class_="wb-break-all")
 
     global repos
     repos = []
@@ -87,3 +87,4 @@ def check_repo():
         a = item.find('a')
         repos.append(a.text.strip())
     
+check()
