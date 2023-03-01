@@ -4,11 +4,12 @@ This version scrapes github page for a specified user
 displays a report on the user 
 
 The report contains:
-1. Number of followers
-2. Number of users being followed
-3. Nmber of people following but not following back 
-4. Opposite of '3.'
-5. Check number of repositories
+- [x] Number of followers
+- [x] Number of users being followed
+- [x] Nmber of people following but not following back 
+- [x] Opposite of '3.'
+- [x] Check number of repositories
+- [x] List repositories
 
 ## Usage
 
