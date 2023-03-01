@@ -8,3 +8,4 @@ The report contains:
 2. Number of users being followed
 3. Nmber of people following but not following back 
 4. Opposite of '3.'
+5. Check number of repositories
