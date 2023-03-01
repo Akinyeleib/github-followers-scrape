@@ -9,3 +9,23 @@ The report contains:
 3. Nmber of people following but not following back 
 4. Opposite of '3.'
 5. Check number of repositories
+
+## Usage
+
+To use the package, you have to import using:
+`from akinyeleib import work`
+
+The function needed in the package is 
+`work.check()`
+
+You can as well as use alias:
+`from akinyeleib import work as ib`
+`ib.check()`
+
+The check() which returns a dictionary object
+`result = ib.check()`
+
+We can then perform a runtime check on the object:
+`print(type(result))`
+
+### Thank you.
