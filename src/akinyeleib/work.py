@@ -70,9 +70,10 @@ def check():
     status = res.status_code
     if status == 200:
         check_repo()
-        loader()
+        return loader()
     elif status == 404:
         print(f'404 bad request\nPage not found!\nAccount not found for user: {username}')
+        return None
 
 
 def check_repo():
@@ -86,5 +87,3 @@ def check_repo():
     for item in items:
         a = item.find('a')
         repos.append(a.text.strip())
-    
-check()
