@@ -1,7 +1,9 @@
-# Github Scrape
+# github-scrape
 
-This version scrapes github page for a specified user 
-displays a report on the user 
+### About
+
+Scrapes github pages for a specified user,
+displays a report about the user's current account status.
 
 The report contains:
 - [x] Number of followers
@@ -10,6 +12,18 @@ The report contains:
 - [x] Opposite of '3.'
 - [x] Check number of repositories
 - [x] List repositories
+
+
+## Installation
+For first time installation:
+'''
+pip install github-scrape
+'''
+
+For recurring installation/update:
+'''
+pip install github-scrape --upgrade
+'''
 
 ## Usage
 
