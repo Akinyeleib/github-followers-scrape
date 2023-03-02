@@ -68,7 +68,7 @@ def check():
     username = input('Enter github Username: ').strip()
     res = rq.get(f'https://github.com/{username}')
 
-    # Retriev status
+    # Retrieve status
     status = res.status_code
     if status == 200:
         check_repo()
@@ -79,7 +79,6 @@ def check():
 
 
 def check_repo():
-    # <span title="24" data-view-component="true" class="Counter">24</span>
     link = f"https://github.com/{username}?tab=repositories"
     req = bs(rq.get(link).text, 'lxml')
     items = req.find_all('h3', class_="wb-break-all")
