@@ -27,22 +27,39 @@ pip install github-scrape --upgrade
 
 ## Usage
 
-To use the package, you have to import using:
-`from akinyeleib import work`
+To use the package, you have to import using any of the following:
 
-The function needed in the package is 
-`work.check()`
+##### Step 1:
 
-You can as well as use alias:
 ```
-from akinyeleib import work as ib
-ib.check()
+from akinyeleib import reader
+from akinyeleib import reader as r
 ```
 
-The check() which returns a dictionary object
-`result = ib.check()`
+##### Step 2:
 
-We can then perform a runtime check on the object:
-`print(type(result))`
+Create an object of "Github" class
+It's constructor accepts the github username as an argument
+For this example, we would use username "akinyeleib"
+`user1 = reader.GitHub("akinyeleib")`
+
+Or:
+
+`user1 = r.GitHub("akinyeleib")`
+
+##### Step 3:
+
+Use the object to access several methods from the class
+Some of the available methods include:
+
+```
+print(f"Followers: {user1.getFollowers()}")
+print(f"Following: {user1.getFollowing()}")
+print("FollowersNotFollowing: " + user1.getFollowersNotFollowing())
+print("FollowingNotFollowers: " + user1.getFollowingNotFollowers())
+print(user1.getDetails())
+```
+Other methods include:
+getFollowing, getFollowers, getRepos
 
 ### Thank you.
