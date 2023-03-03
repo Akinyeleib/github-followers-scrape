@@ -10,8 +10,16 @@ class GitHub:
         self.username = username.strip()
         self.repos = None
         self.details = None
-
+        self.fullName = None
+        
         res = rq.get(f'https://github.com/{username}')
+
+        soup = bs(res.text, 'lxml')
+
+        item = soup.find('span', class_='p-name vcard-fullname d-block overflow-hidden')
+        self.fullName = item.text.strip()
+        
+        print(f'Hello {self.fullName}')
 
         # Retrieve status
         status = res.status_code
