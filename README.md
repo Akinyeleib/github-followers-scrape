@@ -8,10 +8,10 @@ displays a report about the user's current account status.
 The report contains:
 - [x] Number of followers
 - [x] Number of users being followed
-- [x] Number of users following but not following back
-- [x] Opposite of '3.'
+- [x] Number of users followed but not following back
+- [x] Number of followers not followed
 - [x] Check number of repositories
-- [x] List repositories
+- [x] List available repositories (public)
 
 
 ## Installation
@@ -29,13 +29,13 @@ pip install github-scrape --upgrade
 
 ## Usage
 
-To use the package, you have to import using any of the following:
+To use the package, you have to import it using any of the following:
 
 ##### Step 1:
 
 ```
-from akinyeleib import reader
-from akinyeleib import reader as r
+from akinyeleib import github_scrape
+from akinyeleib import github_scrape as r
 ```
 
 ##### Step 2:
@@ -52,7 +52,8 @@ Or:
 
 ##### Step 3:
 
-Use the object to access several methods from the class
+Use the object to access several methods from the class.
+
 Some of the available methods include:
 
 ```
@@ -62,14 +63,26 @@ print("FollowersNotFollowing: " + user1.getFollowersNotFollowing())
 print("FollowingNotFollowers: " + user1.getFollowingNotFollowers())
 print(user1.getDetails())
 ```
+
 Other methods include:
-getFollowing, getFollowers, getRepos, getFollowersCount...
+
+```
+getRepos()
+getDetails()
+getUserName()
+getFollowing()
+getFollowers()
+getFollowersCount()
+getFollowingCount()
+getFollowingNotFollowers()
+getFollowersNotFollowing()
+```
 
 ## Demo
 
 ```
 
->>> from akinyeleib import reader as r
+>>> from akinyeleib import github_scrape as r
 >>> user1 = r.GitHub("Akinyeleib")
 Account found for user: Akinyeleib
 Akinyeleib has 17 repositories
