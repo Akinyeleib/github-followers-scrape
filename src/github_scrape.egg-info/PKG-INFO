@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: github-scrape
-Version: 0.3.3
+Version: 0.3.4
 Summary: A program to scrape github followers
 Author-email: Akinyele Ibrahim <iakinyele3@gmail.com>
 Project-URL: Homepage, https://github.com/akinyeleib/github-followers-scrape
