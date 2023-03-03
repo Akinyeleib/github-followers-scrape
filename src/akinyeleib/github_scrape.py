@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup as bs
 import requests as rq
+from requests.exceptions import ConnectionError
 
 
 # Function to fetch users
