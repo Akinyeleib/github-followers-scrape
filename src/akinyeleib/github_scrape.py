@@ -7,6 +7,27 @@ from requests.exceptions import ConnectionError
 
 class GitHub:
 
+    '''
+    Read github accounts information including: 
+    public repositories
+    followers
+    followings
+
+    Functions:
+
+        getRepos() -> List
+        getDetails() -> List
+        getUserName() -> List
+        getFollowing() -> List
+        getFollowers() -> List
+        getFollowersCount() -> List
+        getFollowingCount() -> List
+        getFollowingNotFollowers() -> List
+        getFollowersNotFollowing() -> List
+        find_difference(self, list1, list2) -> List
+
+    '''
+
     def __init__(self, username):
         self.username = username.strip()
         self.repos = None
