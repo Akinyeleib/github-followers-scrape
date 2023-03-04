@@ -42,7 +42,7 @@ class GitHub:
 
     '''
 
-    def __init__(self, username=''):
+    def __init__(self, username='akinyeleib'):
 
         '''
         Loads all the necessary methods for the account 
@@ -51,7 +51,8 @@ class GitHub:
         Parameters
         ----------
             username : str, optional
-                github account username
+            If the argument "username" is passed, 
+            it takes the value, else, the default value is taken!
 
         '''
 
