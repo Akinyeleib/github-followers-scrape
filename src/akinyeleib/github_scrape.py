@@ -153,4 +153,5 @@ class GitHub:
 
     def getFollowersNotFollowing(self):
         return self.details['followers_not_following']
+    
 
