@@ -8,27 +8,35 @@ from requests.exceptions import ConnectionError
 class GitHub:
 
     '''
-    Read github accounts information including: 
+    class: GitHub(username:string)
+    
+    Reads github account information including: 
     public repositories
     followers
     followings
 
-    Functions:
+    Attributes
+    ----------
+    username : str
+        github account username
 
-        getRepos() -> List
-        getDetails() -> List
-        getUserName() -> List
-        getFollowing() -> List
-        getFollowers() -> List
-        getFollowersCount() -> List
-        getFollowingCount() -> List
-        getFollowingNotFollowers() -> List
-        getFollowersNotFollowing() -> List
-        find_difference(self, list1, list2) -> List
+    Methods
+    -------
+
+    getRepos() -> List
+    getDetails() -> List
+    getUserName() -> List
+    getFollowing() -> List
+    getFollowers() -> List
+    getFollowersCount() -> List
+    getFollowingCount() -> List
+    getFollowingNotFollowers() -> List
+    getFollowersNotFollowing() -> List
+    find_difference(self, list1, list2) -> List
 
     '''
 
-    def __init__(self, username):
+    def __init__(self, username=''):
         self.username = username.strip()
         self.repos = None
         self.details = None
