@@ -8,7 +8,7 @@ from requests.exceptions import ConnectionError
 class GitHub:
 
     '''
-    class: GitHub(username:string)
+    class: GitHub
     
     Reads github account information including: 
     public repositories
@@ -37,6 +37,18 @@ class GitHub:
     '''
 
     def __init__(self, username=''):
+
+        '''
+        Loads all the necessary methods for the account 
+        by calling necessary methods on the object.
+
+        Parameters
+        ----------
+            username : str
+                github account username
+
+        '''
+
         self.username = username.strip()
         self.repos = None
         self.details = None
