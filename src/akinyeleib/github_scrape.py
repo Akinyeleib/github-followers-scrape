@@ -17,22 +17,28 @@ class GitHub:
 
     Attributes
     ----------
-    username : str
-        github account username
+        username : str
+            github account username
+        repos : list
+            public repositories
+        details : dict
+            all account info
+        fullName : str
+            stores account holder's name as it is on the account
 
     Methods
     -------
 
-    getRepos() -> List
-    getDetails() -> List
-    getUserName() -> List
-    getFollowing() -> List
-    getFollowers() -> List
-    getFollowersCount() -> List
-    getFollowingCount() -> List
-    getFollowingNotFollowers() -> List
-    getFollowersNotFollowing() -> List
-    find_difference(self, list1, list2) -> List
+        getRepos() -> List
+        getDetails() -> List
+        getUserName() -> List
+        getFollowing() -> List
+        getFollowers() -> List
+        getFollowersCount() -> List
+        getFollowingCount() -> List
+        getFollowingNotFollowers() -> List
+        getFollowersNotFollowing() -> List
+        find_difference(self, list1, list2) -> List
 
     '''
 
@@ -44,7 +50,7 @@ class GitHub:
 
         Parameters
         ----------
-            username : str
+            username : str, optional
                 github account username
 
         '''
